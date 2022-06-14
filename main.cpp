@@ -23,7 +23,7 @@ int main() {
                 (double(j) / (image_height)),
                 0.25
             );
-
+            
             print_color(std::cout, colors);
         }
     }
