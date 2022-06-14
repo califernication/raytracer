@@ -1,4 +1,6 @@
 #include <iostream>
+#include "color.h"
+#include "vec3.h"
 
 int main() {
 
@@ -14,15 +16,15 @@ int main() {
     for (int j = image_height-1; j >= 0; --j) {
         std::cerr << "\rScanlines remaining: " << j << ' ' << std::flush;
         for (int i = 0; i < image_width; ++i) {
-            auto r = double(i) / (image_width);
-            auto g = double(j) / (image_height);
-            auto b = 0.25;
 
-            int ir = int(255.999 * r);
-            int ig = int(255.999 * g);
-            int ib = int(255.999 * b);
+            // RGB form
+            vec3 colors(
+                (double(i) / (image_width)),
+                (double(j) / (image_height)),
+                0.25
+            );
 
-            std::cout << ir << ' ' << ig << ' ' << ib << '\n';
+            print_color(std::cout, colors);
         }
     }
     std::cerr << "\nDone.\n";
