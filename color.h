@@ -1,3 +1,4 @@
+#ifndef COLOR_H
 #define COLOR_H
 
 #include "vec3.h"
@@ -10,3 +11,5 @@ void print_color(std::ostream &out, color pixel_color) {
         << int(255.999 * pixel_color.y()) << ' '
         << int(255.999 * pixel_color.z()) << '\n';
 }
+
+#endif

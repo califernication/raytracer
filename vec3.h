@@ -65,10 +65,9 @@ class vec3 {
 };
 
 // Type aliases for vec3
-using point3 = vec3;   // 3D point
-using color = vec3;    // RGB color
-
-#endif
+using point = vec3;   // 3D point
+using color = vec3;   // RGB color
+using direction = vec3; // direction vector
 
 // Utility Functions
 
@@ -98,7 +97,7 @@ inline vec3 operator*(const double t, const vec3 &v) {
 }
 
 // (free-func) Vector-num multiplication
-inline vec3 operator*(const double t, const vec3 &v) {
+inline vec3 operator*(const vec3 &v, const double t) {
     return vec3(v.e[0]*t, v.e[1]*t, v.e[2]*t);
 }
 
@@ -125,3 +124,5 @@ inline vec3 cross(const vec3 &v, const vec3 &v1) {
 inline vec3 unit_vector(vec3 v) {
     return v / v.length();
 }
+
+#endif
