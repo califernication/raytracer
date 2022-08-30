@@ -1,25 +1,20 @@
-#ifndef RAY_H
-#define RAY_H
+#pragma once
+#include <Vec3.h>
 
-#include "vec3.h"
-#include "vec3-utility.h"
-
-class ray {
+class Ray {
     public:
         // Constructor: P(t) = A + t*B
-        ray() {}
-        ray(const point& origin, const vec3& direction) : orig(origin), dir(direction) {}
+        Ray() {}
+        Ray(const Point& origin, const Vec3& direction) : origin_(origin), direction_(direction) {}
 
-        point origin() const  { return orig; }
-        vec3 direction() const { return dir; }
+        Point origin() const  { return origin_; }
+        Vec3 direction() const { return direction_; }
 
-        point at(double t) const {
-            return orig + (t * dir);
+        Point at(double t) const {
+            return origin_ + (t * direction_);
         }
 
-    public:
-        point orig;
-        vec3 dir;
+    private:
+        Point origin_;
+        Vec3 direction_;
 };
-
-#endif
