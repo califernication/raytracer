@@ -1,5 +1,5 @@
 #pragma once
-#include <Ray.h>
+#include "Ray.h"
 
 struct HitRecord {
     Point p;

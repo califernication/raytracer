@@ -1,5 +1,5 @@
 #pragma once
-#include <Sphere.h>
+#include "Sphere.h"
 
 bool Sphere::hit(const Ray& r, double t_min, double t_max, HitRecord& rec) const {
     Vec3 oc = r.origin() - center;

@@ -2,10 +2,6 @@
 #include <cmath>
 #include <iostream>
 
-using Point = Vec3;   // 3D point
-using Color = Vec3;   // RGB color
-using Direction = Vec3; // direction vector
-
 class Vec3 {
     public:
         // Constructor with list initialization
@@ -118,3 +114,7 @@ inline Vec3 cross(const Vec3 &v, const Vec3 &v1) {
 inline Vec3 getUnitVector(Vec3 v) {
     return v / v.length();
 }
+
+using Point = Vec3;   // 3D point
+using Color = Vec3;   // RGB color
+using Direction = Vec3; // direction vector

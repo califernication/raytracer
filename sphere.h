@@ -1,6 +1,6 @@
 #pragma once
-#include <Hittable.h>
-#include <Vec3.h>
+#include "Hittable.h"
+#include "Vec3.h"
 
 class Sphere : public Hittable {
     public:
